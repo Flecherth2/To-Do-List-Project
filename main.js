@@ -10,6 +10,17 @@ taskForm.addEventListener("submit", (event) => {
   createNewTask(taskInput.value);
 })
 
+taskList.addEventListener("click", (event) => {
+  event.preventDefault(); 
+  const target = event.target;
+  console.log(target)
+  if(target.classList.contains("task-deletion-button")){
+    target.parentElement.parentElement.remove();
+}
+})
+
+
+
 function createNewTask(text) {
   const task = document.createElement("li");
   task.classList.add("task");

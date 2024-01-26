@@ -14,7 +14,7 @@ taskList.addEventListener("click", (event) => {
   event.preventDefault(); 
   const target = event.target;
   console.log(target)
-  if(target.classList.contains("task-deletion-button")){
+  if(target.classList.contains("fa-trash")){
     target.parentElement.parentElement.remove();
 }
 })
@@ -35,13 +35,15 @@ function createNewTask(text) {
   const btns = document.createElement("div");
   btns.classList.add("task-buttons");
 
-  const editBtn = document.createElement("button");
-  editBtn.classList.add("task-edit-button");
-  editBtn.innerText = "🖊️";
+  const editBtn = document.createElement("i");
+  editBtn.classList.add("fa-solid");
+  editBtn.classList.add("fa-pen");
+  editBtn.classList.add("fa-xl");
 
-  const removeBtn = document.createElement("button");
-  removeBtn.classList.add("task-deletion-button");
-  removeBtn.innerText = "🗑️";
+  const removeBtn = document.createElement("i");
+  removeBtn.classList.add("fa-solid");
+  removeBtn.classList.add("fa-trash");
+  removeBtn.classList.add("fa-xl");
 
   btns.appendChild(editBtn);
   btns.appendChild(removeBtn);

@@ -19,6 +19,25 @@ taskList.addEventListener("click", (event) => {
 }
 })
 
+taskList.addEventListener("click", (event) => {
+  event.preventDefault(); 
+  const target = event.target;
+  console.log(target)
+  if(target.classList.contains("fa-pen")){
+    const task = target.parentElement.parentElement;
+    const taskText = task.querySelector(".task-text");
+    const text = taskText.innerText;
+    const input = document.createElement("input");
+    input.setAttribute("type", "text");
+    input.value = text;
+    taskText.innerText = '';
+    taskText.appendChild(input);
+    input.focus();
+  }
+}
+)
+
+
 
 
 function createNewTask(text) {

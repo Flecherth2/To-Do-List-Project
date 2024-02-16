@@ -156,6 +156,11 @@ h1 {
   text-align: center;
 }
 
+.task-check {
+  width: 25px;
+  height: 25px;
+}
+
 .fa-solid {
   transition-duration: 0.4s;
 }
@@ -164,8 +169,7 @@ h1 {
   color: var(--text-1);
   height: 15px;
   width: 15px;
-
-} 
+}
 
 .fa-trash:hover {
   color: red;
@@ -173,4 +177,15 @@ h1 {
 
 .fa-pen:hover {
   color: var(--pop-2);
+}
+
+.fa-floppy-disk:hover {
+  color: var(--pop-2);
+}
+.edit-input {
+  color: black;
+}
+.done p {
+  text-decoration: line-through;
+  color: var(--text-2);
 }

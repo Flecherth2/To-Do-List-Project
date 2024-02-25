@@ -27,13 +27,28 @@ body {
 }
 
 .settings-container {
-  outline: red solid 1px;
-  margin-right: 0px;
-  background-color: var(--pop-1);
+  border-radius: 15px;
+  margin-top: 100px;
+  min-width: 50px;
+  min-height: 100px;
+  outline: red solid 1px;;
+  background-color: var(--background-3);
   display: flex;
-  justify-items: left;
-  align-items: left;
+  justify-items: right;
+  align-items: right;
   flex-direction: column;
+}
+
+.settings-buttons{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  margin: 0;
+  padding: 0;
+  width: 10%;
+  height: 100%;
 }
 
 .container {
@@ -164,11 +179,48 @@ h1 {
 .fa-solid {
   transition-duration: 0.4s;
 }
+
+.fa-gear{
+  position: relative;
+  margin-left: 16px;
+  margin-top: 15px;
+  height: 20px;
+  width: 20px;
+}
+
+.fa-sun{
+  position: relative;
+  margin-left: 16px;
+  margin-top: 15px;
+  height: 20px;
+  width: 20px;
+}
+
+.fa-moon{
+  position: relative;
+  margin-left: 18px;
+  margin-top: 15px;
+  height: 20px;
+  width: 20px;
+}
+
 .fa-trash {
   margin-top: 10px;
   color: var(--text-1);
   height: 15px;
   width: 15px;
+}
+
+.fa-gear:hover {
+  color:#6e2594
+}
+
+.fa-sun:hover {
+  color: orange;
+}
+
+.fa-moon:hover {
+  color: var(--pop-2);
 }
 
 .fa-trash:hover {
